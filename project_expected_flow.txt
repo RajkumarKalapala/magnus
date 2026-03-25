@@ -1,0 +1,113 @@
+Overall Project Workflow (Step-by-Step)
+Phase 1: Project Setup (1 day)
+
+Create folder structure (explained below)
+Initialize Backend (Node + Express)
+Initialize Frontend (React + Vite)
+Connect Frontend & Backend (Proxy + CORS)
+Setup MongoDB (local or MongoDB Atlas)
+Add basic routing and authentication (even if simple)
+
+Phase 2: Common Setup (Reusable Components)
+
+Create Layout (Sidebar + Top Navbar with "More" dropdown)
+Create reusable Modal component
+Create reusable Toast notification
+Setup React Router v6
+Add Axios for API calls
+
+Phase 3: Implement All 11 Features under "More" Menu (Main Focus)
+You will create one route/page for each item in the More menu.
+Phase 4: Add CRUD + Business Logic (Wherever applicable)
+
+Especially in Images and Autocomplete
+
+Phase 5: Polish & Final Touches
+
+Add basic authentication (login page)
+Make it responsive
+Add comments for business logic
+Deploy (optional – Render / Vercel)
+
+Recommended Folder Structure (MERN)
+textmagnus-clone/
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── utils/
+│   ├── .env
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── common/          → Modal, Toast, Loader, Navbar, Sidebar
+│   │   │   ├── more/            → All 11 feature components
+│   │   ├── pages/
+│   │   │   ├── More/
+│   │   │   │   ├── MultipleTabs.jsx
+│   │   │   │   ├── MenuDemo.jsx
+│   │   │   │   ├── Autocomplete.jsx
+│   │   │   │   ├── Collapsible.jsx
+│   │   │   │   ├── Images.jsx          ← Full CRUD here
+│   │   │   │   ├── Slider.jsx
+│   │   │   │   ├── Tooltips.jsx
+│   │   │   │   ├── Popups.jsx
+│   │   │   │   ├── Links.jsx
+│   │   │   │   ├── CssProperties.jsx
+│   │   │   │   └── Iframes.jsx
+│   │   ├── context/             → AuthContext (optional)
+│   │   ├── services/            → api.js (axios instance)
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── README.md
+└── .gitignore
+Feature-wise Implementation Order (Recommended)
+I strongly suggest you build in this sequence:
+
+Project Setup + Layout + More Menu (Base)
+Popups (Modal) → Reusable component (used by many features)
+Tooltips
+Collapsible Content (Accordion)
+Multiple Tabs
+Menu (Dropdown + Sidebar style)
+Links
+CSS Properties (Easy demo page)
+iFrames
+Slider (Carousel)
+Autocomplete → With backend API (Business Logic heavy)
+Images → Full CRUD + Upload + Business Logic (Most important)
+
+Business Logic Examples You Must Show (in MERN)
+
+Images Page:
+File validation (type + size)
+Upload to backend (multer)
+Save image path in MongoDB
+List, Preview, Delete with confirmation
+Error handling
+
+Autocomplete:
+Debouncing
+API call to backend
+Search from MongoDB collection (e.g., users or cities)
+Keyboard navigation (arrow keys + enter)
+
+Multiple Tabs:
+Add / Remove tabs dynamically
+Persist tabs using localStorage or MongoDB
+
+
+Expected Timeline (if you work daily)
+
+Day 1-2 → Setup + Layout + More Menu
+Day 3-7 → Implement 11 features one by one
+Day 8-9 → Add CRUD in Images + Autocomplete with backend
+Day 10 → Testing, comments, README
