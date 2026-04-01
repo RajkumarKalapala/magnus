@@ -1,0 +1,24 @@
+2. NPM and package.json (The Dependency Manager)
+Half of your script is just running npm install. You need to know what that actually does.
+    What to learn: What a package.json file is, what the node_modules folder is, and what npm run dev does.
+    How much to learn: Think of package.json as a grocery list, and npm install as the command that goes to the store and downloads the ingredients. You only need to understand this concept conceptually. (Time to learn: 20 minutes)
+
+3. JavaScript Syntax (Just to read the file)
+Look at your server.js file. You don't need to write this from scratch yet, but you need to be able to read it without your eyes glazing over.
+    What to learn: Variables (const), imports (require() and import), and Arrow Functions ((req, res) => { ... }).
+    How much to learn: Only enough to trace the logic of server.js. If you can look at const express = require('express'); and understand "this brings the Express tool into my file," you know enough for Phase 1. (Time to learn: 1 hour)
+
+4. Express.js Basics (The Backend Waiter)
+Your backend is just waiting for someone to ask it for information.
+    What to learn: Ports (like 5000), what a Server is, and what a GET request is.
+    How much to learn: Look at app.listen(PORT) and app.get('/api/health'). You only need to understand that the server turns on, listens on port 5000, and replies with a JSON message when someone visits the /api/health URL. (Time to learn: 45 minutes)
+
+5. MongoDB Connection (The Handshake)
+In Phase 1, you aren't saving users or searching for data. You are just checking if the database is turned on.
+    What to learn: What a Connection String is (mongodb://127.0.0.1...).
+    How much to learn: Look at the mongoose.connect(...) block in your script. You just need to understand that this is the backend knocking on the database's door to see if anyone is home. (Time to learn: 15 minutes)
+
+What you can completely IGNORE for now:
+    React: Do not learn React yet. Your script uses Vite to auto-generate a generic React page. You don't need to know how it works right now, just that it exists on Port 3000.
+    Database Queries: Do not learn how to save or find data in MongoDB yet.
+    Git: You can blindly copy-paste git add . and git commit for now.

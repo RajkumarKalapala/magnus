@@ -5,8 +5,10 @@ const mongoose = require('mongoose');
 
 dotenv.config();
 
-const app = express();
+const ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 5000;
+
+const app = express();
 
 // Middleware
 app.use(cors());
